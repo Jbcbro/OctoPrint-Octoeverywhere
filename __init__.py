@@ -98,7 +98,6 @@ CONFIG_SCHEMA = vol.Schema(
                             vol.Required(CONF_API_KEY): cv.string,
                             vol.Required(CONF_HOST): cv.string,
                             vol.Optional(CONF_SSL, default=False): cv.boolean,
-                            vol.Optional(CONF_PORT, default=80): cv.port,
                             vol.Optional(CONF_PATH, default="/"): ensure_valid_path,
                             # Following values are not longer used in the configuration of the integration
                             # and are here for historical purposes
@@ -138,7 +137,6 @@ async def async_setup(hass: HomeAssistant, config: dict):
                     CONF_API_KEY: conf[CONF_API_KEY],
                     CONF_HOST: conf[CONF_HOST],
                     CONF_PATH: conf[CONF_PATH],
-                    CONF_PORT: conf[CONF_PORT],
                     CONF_SSL: conf[CONF_SSL],
                 },
             )
@@ -157,7 +155,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
     client = OctoprintClient(
         entry.data[CONF_HOST],
         websession,
-        entry.data[CONF_PORT],
         entry.data[CONF_SSL],
         entry.data[CONF_PATH],
     )
@@ -240,7 +237,7 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
         configuration_url = URL.build(
             scheme=self.config_entry.data[CONF_SSL] and "https" or "http",
             host=self.config_entry.data[CONF_HOST],
-            port=self.config_entry.data[CONF_PORT],
+
             path=self.config_entry.data[CONF_PATH],
         )
 

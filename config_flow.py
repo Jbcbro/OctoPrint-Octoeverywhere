@@ -23,12 +23,11 @@ from .const import DOMAIN
 _LOGGER = logging.getLogger(__name__)
 
 
-def _schema_with_defaults(username="", host="", port=80, path="/", ssl=False):
+def _schema_with_defaults(username="", host="", path="/", ssl=False):
     return vol.Schema(
         {
             vol.Required(CONF_USERNAME, default=username): str,
             vol.Required(CONF_HOST, default=host): str,
-            vol.Required(CONF_PORT, default=port): cv.port,
             vol.Required(CONF_PATH, default=path): str,
             vol.Required(CONF_SSL, default=ssl): bool,
         },
@@ -153,7 +152,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         self.discovery_schema = _schema_with_defaults(
             host=discovery_info.host,
-            port=discovery_info.port,
             path=discovery_info.properties[CONF_PATH],
         )
 
@@ -175,7 +173,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         self.discovery_schema = _schema_with_defaults(
             host=url.host,
             path=url.path,
-            port=url.port,
             ssl=url.scheme == "https",
         )
 
@@ -187,7 +184,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         octoprint = OctoprintClient(
             user_input[CONF_HOST],
             session,
-            user_input[CONF_PORT],
             user_input[CONF_SSL],
             user_input[CONF_PATH],
         )
