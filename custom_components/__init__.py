@@ -243,7 +243,7 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
 
         return DeviceInfo(
             identifiers={(DOMAIN, unique_id)},
-            manufacturer="OctoPrint",
-            name="OctoPrint",
+            manufacturer="OctoPrint v2",
+            name="OctoPrint v2",
             configuration_url=str(configuration_url),
         )
