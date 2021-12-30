@@ -51,7 +51,7 @@ def ensure_valid_path(value):
 
 
 PLATFORMS = [Platform.BINARY_SENSOR, Platform.SENSOR]
-DEFAULT_NAME = "OctoPrint"
+DEFAULT_NAME = "OctoPrintv2"
 CONF_NUMBER_OF_TOOLS = "number_of_tools"
 CONF_BED = "bed"
 
