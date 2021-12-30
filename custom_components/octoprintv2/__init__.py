@@ -234,9 +234,9 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
         """Device info."""
         unique_id = cast(str, self.config_entry.unique_id)
         configuration_url = URL.build(
-            scheme="https",
-            host="shared-JD2H9NH5SU8RMT6IQB34HVJ3B54DN5QZ.octoeverywhere.com",
-            path="/",
+            scheme=self.config_entry.data[CONF_SSL] and "https" or "http",
+            host=self.config_entry.data[CONF_HOST],
+            path=self.config_entry.data[CONF_PATH],
         )
 
         return DeviceInfo(
