@@ -1,6 +1,6 @@
 {
-  "domain": "octoprint",
-  "name": "OctoPrint",
+  "domain": "octoprintv2",
+  "name": "OctoPrintv2",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/octoprint",
   "requirements": ["pyoctoprintapi==0.1.6"],

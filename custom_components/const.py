@@ -1,5 +1,5 @@
 """Constants for the OctoPrint integration."""
 
-DOMAIN = "octoprint"
+DOMAIN = "octoprintv2"
 
-DEFAULT_NAME = "OctoPrint"
+DEFAULT_NAME = "OctoPrintv2"
