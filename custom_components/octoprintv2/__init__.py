@@ -15,7 +15,6 @@ from homeassistant.const import (
     CONF_MONITORED_CONDITIONS,
     CONF_NAME,
     CONF_PATH,
-    CONF_PORT,
     CONF_SENSORS,
     CONF_SSL,
     Platform,
@@ -237,7 +236,6 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
         configuration_url = URL.build(
             scheme=self.config_entry.data[CONF_SSL] and "https" or "http",
             host=self.config_entry.data[CONF_HOST],
-
             path=self.config_entry.data[CONF_PATH],
         )
 
