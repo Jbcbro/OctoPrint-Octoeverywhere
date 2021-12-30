@@ -180,7 +180,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         session = async_get_clientsession(self.hass)
         OctoPrintv2 = OctoprintClient(
             user_input[CONF_HOST],
-            session,
             user_input[CONF_SSL],
             user_input[CONF_PATH],
         )
