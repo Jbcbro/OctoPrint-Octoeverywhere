@@ -11,7 +11,6 @@ from homeassistant.const import (
     CONF_API_KEY,
     CONF_HOST,
     CONF_PATH,
-    CONF_PORT,
     CONF_SSL,
     CONF_USERNAME,
 )
@@ -76,7 +75,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     data_schema=_schema_with_defaults(
                         user_input.get(CONF_USERNAME),
                         user_input[CONF_HOST],
-                        user_input[CONF_PORT],
                         user_input[CONF_PATH],
                         user_input[CONF_SSL],
                     ),
@@ -114,7 +112,6 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         OctoPrintv2 = OctoprintClient(
             user_input[CONF_HOST],
             session,
-            user_input[CONF_PORT],
             user_input[CONF_SSL],
             user_input[CONF_PATH],
         )
