@@ -10,9 +10,9 @@
             "cannot_connect": "Ha fallat la connexi\u00f3",
             "unknown": "Error inesperat"
         },
-        "flow_title": "Impressora OctoPrint: {host}",
+        "flow_title": "Impressora OctoPrintv2: {host}",
         "progress": {
-            "get_api_key": "Obre la interf\u00edcie d'usuari d'OctoPrint i clica a 'Permet' a la sol\u00b7licitud d'acc\u00e9s de 'Home Assistant'."
+            "get_api_key": "Obre la interf\u00edcie d'usuari d'OctoPrintv2 i clica a 'Permet' a la sol\u00b7licitud d'acc\u00e9s de 'Home Assistant'."
         },
         "step": {
             "user": {

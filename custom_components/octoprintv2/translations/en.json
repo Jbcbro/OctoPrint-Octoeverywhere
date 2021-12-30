@@ -10,9 +10,9 @@
             "cannot_connect": "Failed to connect",
             "unknown": "Unexpected error"
         },
-        "flow_title": "OctoPrint Printer: {host}",
+        "flow_title": "OctoPrintv2 Printer: {host}",
         "progress": {
-            "get_api_key": "Open the OctoPrint UI and click 'Allow' on the Access Request for 'Home Assistant'."
+            "get_api_key": "Open the OctoPrintv2 UI and click 'Allow' on the Access Request for 'Home Assistant'."
         },
         "step": {
             "user": {

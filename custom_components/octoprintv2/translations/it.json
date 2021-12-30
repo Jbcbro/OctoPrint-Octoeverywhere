@@ -10,9 +10,9 @@
             "cannot_connect": "Impossibile connettersi",
             "unknown": "Errore imprevisto"
         },
-        "flow_title": "Stampante OctoPrint: {host}",
+        "flow_title": "Stampante OctoPrintv2: {host}",
         "progress": {
-            "get_api_key": "Apri l'interfaccia utente di OctoPrint e fai clic su \"Consenti\" nella richiesta di accesso per \"Home Assistant\"."
+            "get_api_key": "Apri l'interfaccia utente di OctoPrintv2 e fai clic su \"Consenti\" nella richiesta di accesso per \"Home Assistant\"."
         },
         "step": {
             "user": {

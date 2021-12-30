@@ -2,13 +2,13 @@
   "domain": "octoprintv2",
   "name": "OctoPrintv2",
   "config_flow": true,
-  "documentation": "https://www.home-assistant.io/integrations/octoprint",
+  "documentation": "https://www.home-assistant.io/integrations/OctoPrintv2",
   "requirements": ["pyoctoprintapi==0.1.6"],
   "codeowners": ["@jbcbro"],
   "zeroconf": ["_octoprint._tcp.local."],
   "ssdp": [
     {
-      "manufacturer": "The OctoPrint Project",
+      "manufacturer": "The OctoPrintv2 Project",
       "deviceType": "urn:schemas-upnp-org:device:Basic:1"
     }
   ],

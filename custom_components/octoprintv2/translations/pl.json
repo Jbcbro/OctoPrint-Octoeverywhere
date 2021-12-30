@@ -10,9 +10,9 @@
             "cannot_connect": "Nie mo\u017cna nawi\u0105za\u0107 po\u0142\u0105czenia",
             "unknown": "Nieoczekiwany b\u0142\u0105d"
         },
-        "flow_title": "Drukarka OctoPrint: {host}",
+        "flow_title": "Drukarka OctoPrintv2: {host}",
         "progress": {
-            "get_api_key": "Otw\u00f3rz interfejs OctoPrint i kliknij \u201eZezw\u00f3l\u201d przy \u017c\u0105daniu dost\u0119pu do Home Assistanta."
+            "get_api_key": "Otw\u00f3rz interfejs OctoPrintv2 i kliknij \u201eZezw\u00f3l\u201d przy \u017c\u0105daniu dost\u0119pu do Home Assistanta."
         },
         "step": {
             "user": {

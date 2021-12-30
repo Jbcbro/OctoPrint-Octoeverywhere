@@ -10,9 +10,9 @@
             "cannot_connect": "\u9023\u7dda\u5931\u6557",
             "unknown": "\u672a\u9810\u671f\u932f\u8aa4"
         },
-        "flow_title": "OctoPrint \u5370\u8868\u6a5f\uff1a{host}",
+        "flow_title": "OctoPrintv2 \u5370\u8868\u6a5f\uff1a{host}",
         "progress": {
-            "get_api_key": "\u958b\u555f OctoPrint UI \u4e26\u65bc 'Home Assistant' \u5b58\u53d6\u8acb\u6c42\u4e0a\u9ede\u9078 '\u5141\u8a31'\u3002"
+            "get_api_key": "\u958b\u555f OctoPrintv2 UI \u4e26\u65bc 'Home Assistant' \u5b58\u53d6\u8acb\u6c42\u4e0a\u9ede\u9078 '\u5141\u8a31'\u3002"
         },
         "step": {
             "user": {

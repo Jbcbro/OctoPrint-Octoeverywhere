@@ -10,9 +10,9 @@
             "cannot_connect": "Tilkobling mislyktes",
             "unknown": "Uventet feil"
         },
-        "flow_title": "OctoPrint-skriver: {host}",
+        "flow_title": "OctoPrintv2-skriver: {host}",
         "progress": {
-            "get_api_key": "\u00c5pne OctoPrint UI og klikk \"Tillat\" p\u00e5 tilgangsforesp\u00f8rselen for \"Home Assistant\"."
+            "get_api_key": "\u00c5pne OctoPrintv2 UI og klikk \"Tillat\" p\u00e5 tilgangsforesp\u00f8rselen for \"Home Assistant\"."
         },
         "step": {
             "user": {

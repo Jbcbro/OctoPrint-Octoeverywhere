@@ -10,9 +10,9 @@
             "cannot_connect": "Gagal terhubung",
             "unknown": "Kesalahan yang tidak diharapkan"
         },
-        "flow_title": "OctoPrint Printer: {host}",
+        "flow_title": "OctoPrintv2 Printer: {host}",
         "progress": {
-            "get_api_key": "Buka antarmuka OctoPrint dan klik 'Izinkan' pada Permintaan Akses untuk 'Home Assistant'."
+            "get_api_key": "Buka antarmuka OctoPrintv2 dan klik 'Izinkan' pada Permintaan Akses untuk 'Home Assistant'."
         },
         "step": {
             "user": {

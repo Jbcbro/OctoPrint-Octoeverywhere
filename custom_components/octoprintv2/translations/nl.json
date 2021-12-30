@@ -10,9 +10,9 @@
             "cannot_connect": "Kan geen verbinding maken",
             "unknown": "Onverwachte fout"
         },
-        "flow_title": "OctoPrint Printer: {host}",
+        "flow_title": "OctoPrintv2 Printer: {host}",
         "progress": {
-            "get_api_key": "Open de OctoPrint UI en klik op 'Toestaan' op het toegangsverzoek voor 'Home Assistant'."
+            "get_api_key": "Open de OctoPrintv2 UI en klik op 'Toestaan' op het toegangsverzoek voor 'Home Assistant'."
         },
         "step": {
             "user": {

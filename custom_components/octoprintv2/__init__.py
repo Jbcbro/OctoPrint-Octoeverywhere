@@ -1,4 +1,4 @@
-"""Support for monitoring OctoPrint 3D printers."""
+"""Support for monitoring OctoPrintv2 3D printers."""
 from datetime import timedelta
 import logging
 from typing import cast
@@ -122,7 +122,7 @@ CONFIG_SCHEMA = vol.Schema(
 
 
 async def async_setup(hass: HomeAssistant, config: dict):
-    """Set up the OctoPrint component."""
+    """Set up the OctoPrintv2 component."""
     if DOMAIN not in config:
         return True
 
@@ -146,7 +146,7 @@ async def async_setup(hass: HomeAssistant, config: dict):
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up OctoPrint from a config entry."""
+    """Set up OctoPrintv2 from a config entry."""
 
     if DOMAIN not in hass.data:
         hass.data[DOMAIN] = {}
@@ -183,14 +183,14 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
 
 
 class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
-    """Class to manage fetching Octoprint data."""
+    """Class to manage fetching OctoPrintv2 data."""
 
     config_entry: ConfigEntry
 
     def __init__(
         self,
         hass: HomeAssistant,
-        octoprint: OctoprintClient,
+        OctoPrintv2: OctoprintClient,
         config_entry: ConfigEntry,
         interval: int,
     ) -> None:
@@ -198,11 +198,11 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
         super().__init__(
             hass,
             _LOGGER,
-            name=f"octoprint-{config_entry.entry_id}",
+            name=f"OctoPrintv2-{config_entry.entry_id}",
             update_interval=timedelta(seconds=interval),
         )
         self.config_entry = config_entry
-        self._octoprint = octoprint
+        self._octoprint = OctoPrintv2
         self._printer_offline = False
         self.data = {"printer": None, "job": None, "last_read_time": None}
 
@@ -214,7 +214,7 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
         except ApiError as err:
             raise UpdateFailed(err) from err
 
-        # If octoprint is on, but the printer is disconnected
+        # If OctoPrintv2 is on, but the printer is disconnected
         # printer will return a 409, so continue using the last
         # reading if there is one
         try:
@@ -243,7 +243,7 @@ class OctoprintDataUpdateCoordinator(DataUpdateCoordinator):
 
         return DeviceInfo(
             identifiers={(DOMAIN, unique_id)},
-            manufacturer="OctoPrint v2",
-            name="OctoPrint v2",
+            manufacturer="OctoPrintv2 v2",
+            name="OctoPrintv2 v2",
             configuration_url=str(configuration_url),
         )

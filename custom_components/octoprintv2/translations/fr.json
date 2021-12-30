@@ -10,9 +10,9 @@
             "cannot_connect": "\u00c9chec de connexion",
             "unknown": "Erreur inattendue"
         },
-        "flow_title": "Imprimante OctoPrint\u00a0: {host}",
+        "flow_title": "Imprimante OctoPrintv2\u00a0: {host}",
         "progress": {
-            "get_api_key": "Ouvrez l'interface utilisateur d'OctoPrint et cliquez sur \u00abAutoriser\u00bb sur la demande d'acc\u00e8s pour \u00abHome Assistant\u00bb."
+            "get_api_key": "Ouvrez l'interface utilisateur d'OctoPrintv2 et cliquez sur \u00abAutoriser\u00bb sur la demande d'acc\u00e8s pour \u00abHome Assistant\u00bb."
         },
         "step": {
             "user": {

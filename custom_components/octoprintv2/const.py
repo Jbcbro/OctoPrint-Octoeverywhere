@@ -1,4 +1,4 @@
-"""Constants for the OctoPrint integration."""
+"""Constants for the OctoPrintv2 integration."""
 
 DOMAIN = "octoprintv2"
 

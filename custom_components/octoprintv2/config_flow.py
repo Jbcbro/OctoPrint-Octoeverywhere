@@ -1,4 +1,4 @@
-"""Config flow for OctoPrint integration."""
+"""Config flow for OctoPrintv2 integration."""
 import logging
 
 from pyoctoprintapi import ApiError, OctoprintClient, OctoprintException
@@ -36,14 +36,14 @@ def _schema_with_defaults(username="", host="", path="/", ssl=False):
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for OctoPrint."""
+    """Handle a config flow for OctoPrintv2."""
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
     api_key_task = None
 
     def __init__(self) -> None:
-        """Handle a config flow for OctoPrint."""
+        """Handle a config flow for OctoPrintv2."""
         self.discovery_schema = None
         self._user_input = None
 
@@ -111,17 +111,17 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def _finish_config(self, user_input):
         """Finish the configuration setup."""
         session = async_get_clientsession(self.hass)
-        octoprint = OctoprintClient(
+        OctoPrintv2 = OctoprintClient(
             user_input[CONF_HOST],
             session,
             user_input[CONF_PORT],
             user_input[CONF_SSL],
             user_input[CONF_PATH],
         )
-        octoprint.set_api_key(user_input[CONF_API_KEY])
+        OctoPrintv2.set_api_key(user_input[CONF_API_KEY])
 
         try:
-            discovery = await octoprint.get_discovery_info()
+            discovery = await OctoPrintv2.get_discovery_info()
         except ApiError as err:
             _LOGGER.error("Failed to connect to printer")
             raise CannotConnect from err
@@ -181,7 +181,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def _async_get_auth_key(self, user_input: dict):
         """Get application api key."""
         session = async_get_clientsession(self.hass)
-        octoprint = OctoprintClient(
+        OctoPrintv2 = OctoprintClient(
             user_input[CONF_HOST],
             session,
             user_input[CONF_SSL],
@@ -189,7 +189,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         )
 
         try:
-            user_input[CONF_API_KEY] = await octoprint.request_app_key(
+            user_input[CONF_API_KEY] = await OctoPrintv2.request_app_key(
                 "Home Assistant", user_input[CONF_USERNAME], 300
             )
         finally:

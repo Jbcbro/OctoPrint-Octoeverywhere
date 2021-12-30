@@ -10,9 +10,9 @@
             "cannot_connect": "Sikertelen csatlakoz\u00e1s",
             "unknown": "V\u00e1ratlan hiba t\u00f6rt\u00e9nt"
         },
-        "flow_title": "OctoPrint nyomtat\u00f3: {host}",
+        "flow_title": "OctoPrintv2 nyomtat\u00f3: {host}",
         "progress": {
-            "get_api_key": "Nyissa meg az OctoPrint kezel\u0151 fel\u00fclet\u00e9t, \u00e9s kattintson az 'Allow' gombra a 'Home Assistant' hozz\u00e1f\u00e9r\u00e9si k\u00e9relemn\u00e9l."
+            "get_api_key": "Nyissa meg az OctoPrintv2 kezel\u0151 fel\u00fclet\u00e9t, \u00e9s kattintson az 'Allow' gombra a 'Home Assistant' hozz\u00e1f\u00e9r\u00e9si k\u00e9relemn\u00e9l."
         },
         "step": {
             "user": {
